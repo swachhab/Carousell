@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180923 20:51:26.117" generator="Robot 3.0.4 (Python 2.7.10 on darwin)">
+<suite source="/Users/swapan/AutomationFramework/TestCases/tc001_verify_total_amount.txt" id="s1" name="TestCases">
+<test id="s1-t1" name="TC1 Verify Total Amount">
+<kw name="Launch Application" library="Common_Keywords">
+<doc>Launching App http://0.0.0.0:4723/wd/hub</doc>
+<arguments>
+<arg>${remote_url}</arg>
+</arguments>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>platformName=${platformname}</arg>
+<arg>deviceName=${devicename}</arg>
+<arg>appPackage=${apppackage}</arg>
+<arg>appActivity=${appactivity}</arg>
+<arg>appwaitactivity=${appwaitactivity}</arg>
+<arg>automationName=${automationname}</arg>
+</arguments>
+<assign>
+<var>${app}</var>
+</assign>
+<msg timestamp="20180923 20:52:05.186" level="INFO">${app} = 1</msg>
+<status status="PASS" endtime="20180923 20:52:05.186" starttime="20180923 20:51:26.310"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${App_var}</arg>
+<arg>${app}</arg>
+</arguments>
+<msg timestamp="20180923 20:52:05.189" level="INFO">${App_var} = 1</msg>
+<status status="PASS" endtime="20180923 20:52:05.189" starttime="20180923 20:52:05.186"></status>
+</kw>
+<status status="PASS" endtime="20180923 20:52:05.189" starttime="20180923 20:51:26.310"></status>
+</kw>
+<kw name="Check Basic UI On Home Screen">
+<doc>Verify basic app related elements on home screens</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180923 20:52:08.193" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180923 20:52:08.193" starttime="20180923 20:52:05.191"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${app_icon}</arg>
+<arg>30</arg>
+<arg>${error_message} ${app_icon}</arg>
+</arguments>
+<status status="PASS" endtime="20180923 20:52:08.365" starttime="20180923 20:52:08.194"></status>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${app_title}</arg>
+<arg>${app_title_text}</arg>
+</arguments>
+<msg timestamp="20180923 20:52:08.366" level="INFO">Verifying element '//android.widget.TextView[@resource-id="android:id/action_bar_title"]' contains text 'FasTip'.</msg>
+<status status="PASS" endtime="20180923 20:52:08.507" starttime="20180923 20:52:08.365"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${settings_btn}</arg>
+</arguments>
+<msg timestamp="20180923 20:52:08.626" level="INFO">Current page contains element '//android.widget.Button[@resource-id="org.traeg.fastip:id/menu_settings"]'.</msg>
+<status status="PASS" endtime="20180923 20:52:08.626" starttime="20180923 20:52:08.507"></status>
+</kw>
+<status status="PASS" endtime="20180923 20:52:08.626" starttime="20180923 20:52:05.190"></status>
+</kw>
+<kw name="Input Bill Amount And Verify Total Amount">
+<doc>Verify total amount by input bill amount</doc>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${bill_amount_textfield}</arg>
+<arg>${bill_amt}</arg>
+</arguments>
+<msg timestamp="20180923 20:52:08.628" level="INFO">Typing text '100' into text field '//android.widget.EditText[@resource-id="org.traeg.fastip:id/billAmtEditText"]'</msg>
+<status status="PASS" endtime="20180923 20:52:14.783" starttime="20180923 20:52:08.627"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${calculate_tip_btn}</arg>
+</arguments>
+<msg timestamp="20180923 20:52:14.785" level="INFO">Clicking element '//android.widget.Button[@resource-id="org.traeg.fastip:id/calcTipButton"]'.</msg>
+<status status="PASS" endtime="20180923 20:52:15.671" starttime="20180923 20:52:14.784"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180923 20:52:16.673" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180923 20:52:16.674" starttime="20180923 20:52:15.672"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${tip_percent_value_textfield}</arg>
+</arguments>
+<assign>
+<var>${tip_perc}</var>
+</assign>
+<msg timestamp="20180923 20:52:16.914" level="INFO">Element '//android.widget.TextView[@resource-id="org.traeg.fastip:id/tipPctTextView"]' text is '15.0%' </msg>
+<msg timestamp="20180923 20:52:16.914" level="INFO">${tip_perc} = 15.0%</msg>
+<status status="PASS" endtime="20180923 20:52:16.914" starttime="20180923 20:52:16.674"></status>
+</kw>
+<kw name="Get Value From String" library="Common_Keywords">
+<arguments>
+<arg>${tip_perc}</arg>
+</arguments>
+<assign>
+<var>${tip_perc_final}</var>
+</assign>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${text}</arg>
+<arg>\$</arg>
+</arguments>
+<assign>
+<var>${value_text}</var>
+</assign>
+<msg timestamp="20180923 20:52:16.916" level="INFO">${value_text} = 15.0%</msg>
+<status status="PASS" endtime="20180923 20:52:16.916" starttime="20180923 20:52:16.915"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${value_text}</arg>
+<arg>\%</arg>
+</arguments>
+<assign>
+<var>${value_text}</var>
+</assign>
+<msg timestamp="20180923 20:52:16.919" level="INFO">${value_text} = 15.0</msg>
+<status status="PASS" endtime="20180923 20:52:16.919" starttime="20180923 20:52:16.917"></status>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<doc>Converts the given item to a floating point number.</doc>
+<arguments>
+<arg>${value_text}</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20180923 20:52:16.920" level="INFO">${val} = 15.0</msg>
+<status status="PASS" endtime="20180923 20:52:16.921" starttime="20180923 20:52:16.920"></status>
+</kw>
+<msg timestamp="20180923 20:52:16.921" level="INFO">${tip_perc_final} = 15.0</msg>
+<status status="PASS" endtime="20180923 20:52:16.921" starttime="20180923 20:52:16.914"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${tip_value_textfield}</arg>
+</arguments>
+<assign>
+<var>${tip_amt}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.134" level="INFO">Element '//android.widget.TextView[@resource-id="org.traeg.fastip:id/tipAmtTextView"]' text is '$15.00' </msg>
+<msg timestamp="20180923 20:52:17.135" level="INFO">${tip_amt} = $15.00</msg>
+<status status="PASS" endtime="20180923 20:52:17.135" starttime="20180923 20:52:16.921"></status>
+</kw>
+<kw name="Get Value From String" library="Common_Keywords">
+<arguments>
+<arg>${tip_amt}</arg>
+</arguments>
+<assign>
+<var>${tip_amt_final}</var>
+</assign>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${text}</arg>
+<arg>\$</arg>
+</arguments>
+<assign>
+<var>${value_text}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.137" level="INFO">${value_text} = 15.00</msg>
+<status status="PASS" endtime="20180923 20:52:17.137" starttime="20180923 20:52:17.136"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${value_text}</arg>
+<arg>\%</arg>
+</arguments>
+<assign>
+<var>${value_text}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.138" level="INFO">${value_text} = 15.00</msg>
+<status status="PASS" endtime="20180923 20:52:17.138" starttime="20180923 20:52:17.137"></status>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<doc>Converts the given item to a floating point number.</doc>
+<arguments>
+<arg>${value_text}</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.139" level="INFO">${val} = 15.0</msg>
+<status status="PASS" endtime="20180923 20:52:17.139" starttime="20180923 20:52:17.139"></status>
+</kw>
+<msg timestamp="20180923 20:52:17.140" level="INFO">${tip_amt_final} = 15.0</msg>
+<status status="PASS" endtime="20180923 20:52:17.140" starttime="20180923 20:52:17.135"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${total_value_textfield}</arg>
+</arguments>
+<assign>
+<var>${total_amt}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.349" level="INFO">Element '//android.widget.TextView[@resource-id="org.traeg.fastip:id/totalAmtTextView"]' text is '$115.00' </msg>
+<msg timestamp="20180923 20:52:17.350" level="INFO">${total_amt} = $115.00</msg>
+<status status="PASS" endtime="20180923 20:52:17.350" starttime="20180923 20:52:17.140"></status>
+</kw>
+<kw name="Get Value From String" library="Common_Keywords">
+<arguments>
+<arg>${total_amt}</arg>
+</arguments>
+<assign>
+<var>${total_amt_final}</var>
+</assign>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${text}</arg>
+<arg>\$</arg>
+</arguments>
+<assign>
+<var>${value_text}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.353" level="INFO">${value_text} = 115.00</msg>
+<status status="PASS" endtime="20180923 20:52:17.353" starttime="20180923 20:52:17.352"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${value_text}</arg>
+<arg>\%</arg>
+</arguments>
+<assign>
+<var>${value_text}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.354" level="INFO">${value_text} = 115.00</msg>
+<status status="PASS" endtime="20180923 20:52:17.354" starttime="20180923 20:52:17.353"></status>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<doc>Converts the given item to a floating point number.</doc>
+<arguments>
+<arg>${value_text}</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20180923 20:52:17.356" level="INFO">${val} = 115.0</msg>
+<status status="PASS" endtime="20180923 20:52:17.356" starttime="20180923 20:52:17.354"></status>
+</kw>
+<msg timestamp="20180923 20:52:17.356" level="INFO">${total_amt_final} = 115.0</msg>
+<status status="PASS" endtime="20180923 20:52:17.356" starttime="20180923 20:52:17.351"></status>
+</kw>
+<status status="PASS" endtime="20180923 20:52:17.357" starttime="20180923 20:52:08.627"></status>
+</kw>
+<doc>Verify total amount by entering billing amount</doc>
+<status status="PASS" endtime="20180923 20:52:17.357" critical="yes" starttime="20180923 20:51:26.309"></status>
+</test>
+<status status="PASS" endtime="20180923 20:52:17.359" starttime="20180923 20:51:26.119"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestCases" pass="1">TestCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

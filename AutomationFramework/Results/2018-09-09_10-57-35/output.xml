@@ -1,0 +1,1965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180909 10:57:36.568" generator="Robot 3.0.4 (Python 2.7.10 on darwin)">
+<suite id="s1" name="TestCases">
+<suite source="/Users/swapan/AutomationFramework/TestCases/tc1_verify_search.txt" id="s1-s1" name="Tc1 Verify Search">
+<test id="s1-s1-t1" name="TC1 Verify Search">
+<kw type="setup" name="Setting Up" library="Common_Keywords">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${test_URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180909 10:57:37.272" level="INFO">Opening browser 'Chrome' to base url 'http://magazine.trivago.com/'</msg>
+<status status="PASS" endtime="20180909 10:57:58.848" starttime="20180909 10:57:37.272"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20180909 10:58:04.850" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20180909 10:58:04.851" starttime="20180909 10:57:58.848"></status>
+</kw>
+<kw name="Set Selenium Speed" library="ExtendedSelenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:04.852" starttime="20180909 10:58:04.851"></status>
+</kw>
+<kw name="Register Keyword To Run On Failure" library="ExtendedSelenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Failed Steps</arg>
+</arguments>
+<msg timestamp="20180909 10:58:04.853" level="INFO">Failed Steps will be run on failure.</msg>
+<status status="PASS" endtime="20180909 10:58:04.853" starttime="20180909 10:58:04.852"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:58:04.853" starttime="20180909 10:57:37.272"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${Search_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:05.884" starttime="20180909 10:58:04.855"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 10:58:05.885" level="INFO">Clicking element '//div[@class="search-icon"]'.</msg>
+<status status="PASS" endtime="20180909 10:58:11.551" starttime="20180909 10:58:05.885"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:58:11.551" starttime="20180909 10:58:04.854"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Search_TextBox_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Search_TextBox_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:12.578" starttime="20180909 10:58:11.552"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Search_TextBox_xpath}</arg>
+<arg>${location}</arg>
+</arguments>
+<msg timestamp="20180909 10:58:12.580" level="INFO">Typing text 'Midwest' into text field '//input[@class="input search-input"]'</msg>
+<status status="PASS" endtime="20180909 10:58:19.811" starttime="20180909 10:58:12.579"></status>
+</kw>
+<kw name="Press Key" library="ExtendedSelenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${Search_TextBox_xpath}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:21.865" starttime="20180909 10:58:19.812"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Search_Result_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Search_Result_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:22.975" starttime="20180909 10:58:21.866"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${first_article_city_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${first_article_city_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:23.997" starttime="20180909 10:58:22.976"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Search result successfully verified</arg>
+</arguments>
+<msg timestamp="20180909 10:58:24.000" level="INFO">Search result successfully verified</msg>
+<status status="PASS" endtime="20180909 10:58:24.000" starttime="20180909 10:58:23.999"></status>
+</kw>
+<kw type="teardown" name="TearDown Steps" library="Common_Keywords">
+<kw name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180909 10:58:26.080" starttime="20180909 10:58:24.002"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:58:26.081" starttime="20180909 10:58:24.001"></status>
+</kw>
+<doc>Verify Search By Entering A Location</doc>
+<status status="PASS" endtime="20180909 10:58:26.081" critical="yes" starttime="20180909 10:57:37.270"></status>
+</test>
+<status status="PASS" endtime="20180909 10:58:26.084" starttime="20180909 10:57:36.605"></status>
+</suite>
+<suite source="/Users/swapan/AutomationFramework/TestCases/tc6_verify_countries.txt" id="s1-s2" name="Tc6 Verify Countries">
+<test id="s1-s2-t1" name="TC6 Navigate To Country Drop Down And Verify All Urls">
+<kw type="setup" name="Setting Up" library="Common_Keywords">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${test_URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180909 10:58:26.102" level="INFO">Opening browser 'Chrome' to base url 'http://magazine.trivago.com/'</msg>
+<status status="PASS" endtime="20180909 10:58:45.459" starttime="20180909 10:58:26.102"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20180909 10:58:51.463" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20180909 10:58:51.463" starttime="20180909 10:58:45.460"></status>
+</kw>
+<kw name="Set Selenium Speed" library="ExtendedSelenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:51.464" starttime="20180909 10:58:51.463"></status>
+</kw>
+<kw name="Register Keyword To Run On Failure" library="ExtendedSelenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Failed Steps</arg>
+</arguments>
+<msg timestamp="20180909 10:58:51.465" level="INFO">Failed Steps will be run on failure.</msg>
+<status status="PASS" endtime="20180909 10:58:51.465" starttime="20180909 10:58:51.464"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:58:51.466" starttime="20180909 10:58:26.102"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180909 10:58:53.469" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180909 10:58:53.469" starttime="20180909 10:58:51.466"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Search_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Search_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:58:54.500" starttime="20180909 10:58:53.470"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${Country_Option_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 10:58:54.502" level="INFO">Scrolling element '//select[@class="locales-dropdown"]/option' into view.</msg>
+<status status="PASS" endtime="20180909 10:58:56.535" starttime="20180909 10:58:54.501"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180909 10:58:58.539" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180909 10:58:58.539" starttime="20180909 10:58:56.536"></status>
+</kw>
+<kw name="Get Webelements" library="ExtendedSelenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${Country_Option_xpath}</arg>
+</arguments>
+<assign>
+<var>@{countries_url_list}</var>
+</assign>
+<msg timestamp="20180909 10:58:59.559" level="INFO">@{countries_url_list} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e13f77c98b2d799595261a19796d22f9", element="0.003262316796958764-3")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (session="e13f77c9...</msg>
+<status status="PASS" endtime="20180909 10:58:59.559" starttime="20180909 10:58:58.540"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{url_list}</var>
+</assign>
+<msg timestamp="20180909 10:58:59.561" level="INFO">@{url_list} = [ ]</msg>
+<status status="PASS" endtime="20180909 10:58:59.561" starttime="20180909 10:58:59.560"></status>
+</kw>
+<kw type="for" name="${ELEMENT} IN [ @{countries_url_list} ]">
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-3&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:01.535" starttime="20180909 10:58:59.563"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:02.545" level="INFO">http://magazine.trivago.it</msg>
+<status status="PASS" endtime="20180909 10:59:02.546" starttime="20180909 10:59:01.536"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:02.546" starttime="20180909 10:58:59.562"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-4&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:06.134" starttime="20180909 10:59:02.546"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:07.149" level="INFO">http://magazine.trivago.es</msg>
+<status status="PASS" endtime="20180909 10:59:07.150" starttime="20180909 10:59:06.134"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:07.150" starttime="20180909 10:59:02.546"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-5&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:10.804" starttime="20180909 10:59:07.150"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:11.817" level="INFO">http://magazine.trivago.de</msg>
+<status status="PASS" endtime="20180909 10:59:11.817" starttime="20180909 10:59:10.804"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:11.817" starttime="20180909 10:59:07.150"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-6&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:15.613" starttime="20180909 10:59:11.818"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:16.624" level="INFO">http://room5.trivago.fr</msg>
+<status status="PASS" endtime="20180909 10:59:16.625" starttime="20180909 10:59:15.614"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:16.625" starttime="20180909 10:59:11.817"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-7&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:20.332" starttime="20180909 10:59:16.627"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:21.347" level="INFO">http://magazine.trivago.com</msg>
+<status status="PASS" endtime="20180909 10:59:21.347" starttime="20180909 10:59:20.333"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:21.348" starttime="20180909 10:59:16.626"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-8&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:24.970" starttime="20180909 10:59:21.349"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:25.980" level="INFO">http://magazine.trivago.ca</msg>
+<status status="PASS" endtime="20180909 10:59:25.980" starttime="20180909 10:59:24.971"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:25.980" starttime="20180909 10:59:21.349"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-9&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:29.634" starttime="20180909 10:59:25.980"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:30.648" level="INFO">http://magazine.trivago.hk</msg>
+<status status="PASS" endtime="20180909 10:59:30.649" starttime="20180909 10:59:29.634"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:30.649" starttime="20180909 10:59:25.980"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-10&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:33.878" starttime="20180909 10:59:30.649"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:34.890" level="INFO">http://magazine.trivago.com.au</msg>
+<status status="PASS" endtime="20180909 10:59:34.891" starttime="20180909 10:59:33.878"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:34.891" starttime="20180909 10:59:30.649"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-11&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:38.463" starttime="20180909 10:59:34.891"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:39.474" level="INFO">http://magazine.trivago.fi</msg>
+<status status="PASS" endtime="20180909 10:59:39.474" starttime="20180909 10:59:38.463"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:39.474" starttime="20180909 10:59:34.891"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-12&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:43.090" starttime="20180909 10:59:39.475"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:44.103" level="INFO">http://magazine.trivago.com.tr</msg>
+<status status="PASS" endtime="20180909 10:59:44.103" starttime="20180909 10:59:43.090"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:44.103" starttime="20180909 10:59:39.475"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-13&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:47.442" starttime="20180909 10:59:44.104"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:48.453" level="INFO">http://magazine.trivago.com.br</msg>
+<status status="PASS" endtime="20180909 10:59:48.453" starttime="20180909 10:59:47.442"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:48.453" starttime="20180909 10:59:44.104"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-14&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:52.293" starttime="20180909 10:59:48.454"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:53.307" level="INFO">http://magazine.trivago.pt</msg>
+<status status="PASS" endtime="20180909 10:59:53.308" starttime="20180909 10:59:52.293"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:53.308" starttime="20180909 10:59:48.454"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-15&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 10:59:56.500" starttime="20180909 10:59:53.308"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 10:59:57.510" level="INFO">http://magazine.trivago.com.mx</msg>
+<status status="PASS" endtime="20180909 10:59:57.511" starttime="20180909 10:59:56.500"></status>
+</kw>
+<status status="PASS" endtime="20180909 10:59:57.511" starttime="20180909 10:59:53.308"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-16&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:00:01.373" starttime="20180909 10:59:57.511"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:00:02.382" level="INFO">http://magazine.trivago.ie</msg>
+<status status="PASS" endtime="20180909 11:00:02.382" starttime="20180909 11:00:01.374"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:00:02.382" starttime="20180909 10:59:57.511"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-17&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:00:04.088" starttime="20180909 11:00:02.383"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:00:05.095" level="INFO">http://magazine.trivago.co.uk</msg>
+<status status="PASS" endtime="20180909 11:00:05.095" starttime="20180909 11:00:04.088"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:00:05.095" starttime="20180909 11:00:02.382"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-18&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:00:06.729" starttime="20180909 11:00:05.096"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:00:07.742" level="INFO">http://magazine.trivago.gr</msg>
+<status status="PASS" endtime="20180909 11:00:07.742" starttime="20180909 11:00:06.729"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:00:07.743" starttime="20180909 11:00:05.096"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-19&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:24.783" starttime="20180909 11:00:07.744"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:25.796" level="INFO">http://magazine.trivago.dk</msg>
+<status status="PASS" endtime="20180909 11:01:25.796" starttime="20180909 11:01:24.784"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:25.796" starttime="20180909 11:00:07.743"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-20&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:27.420" starttime="20180909 11:01:25.797"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:28.435" level="INFO">http://magazine.trivago.no</msg>
+<status status="PASS" endtime="20180909 11:01:28.435" starttime="20180909 11:01:27.421"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:28.435" starttime="20180909 11:01:25.796"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-21&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:30.203" starttime="20180909 11:01:28.436"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:31.213" level="INFO">http://magazine.trivago.se</msg>
+<status status="PASS" endtime="20180909 11:01:31.213" starttime="20180909 11:01:30.204"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:31.214" starttime="20180909 11:01:28.436"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-22&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:33.452" starttime="20180909 11:01:31.215"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:34.467" level="INFO">http://magazine.trivago.cz</msg>
+<status status="PASS" endtime="20180909 11:01:34.467" starttime="20180909 11:01:33.452"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:34.467" starttime="20180909 11:01:31.214"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-23&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:35.672" starttime="20180909 11:01:34.468"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:36.686" level="INFO">http://magazine.trivago.sg</msg>
+<status status="PASS" endtime="20180909 11:01:36.686" starttime="20180909 11:01:35.672"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:36.686" starttime="20180909 11:01:34.467"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-24&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:37.899" starttime="20180909 11:01:36.687"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:38.911" level="INFO">http://magazine.trivago.com.ar</msg>
+<status status="PASS" endtime="20180909 11:01:38.912" starttime="20180909 11:01:37.899"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:38.912" starttime="20180909 11:01:36.686"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-25&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:40.571" starttime="20180909 11:01:38.912"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:41.585" level="INFO">http://magazine.trivago.pl</msg>
+<status status="PASS" endtime="20180909 11:01:41.585" starttime="20180909 11:01:40.571"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:41.585" starttime="20180909 11:01:38.912"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-26&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:43.647" starttime="20180909 11:01:41.586"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:44.652" level="INFO">http://magazine.trivago.ru</msg>
+<status status="PASS" endtime="20180909 11:01:44.652" starttime="20180909 11:01:43.647"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:44.653" starttime="20180909 11:01:41.586"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e13f77c98b2d799595261a19796d22f9&quot;, element=&quot;0.003262316796958764-27&quot;)&gt;">
+<kw name="Check Url" library="ApplicationLibrary">
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:01:48.206" starttime="20180909 11:01:44.653"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('value')}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:49.213" level="INFO">http://magazine.trivago.hu</msg>
+<status status="PASS" endtime="20180909 11:01:49.213" starttime="20180909 11:01:48.206"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:49.214" starttime="20180909 11:01:44.653"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:49.214" starttime="20180909 10:58:59.562"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Verified All Countries Page Redirections</arg>
+</arguments>
+<msg timestamp="20180909 11:01:49.214" level="INFO">Verified All Countries Page Redirections</msg>
+<status status="PASS" endtime="20180909 11:01:49.215" starttime="20180909 11:01:49.214"></status>
+</kw>
+<kw type="teardown" name="TearDown Steps" library="Common_Keywords">
+<kw name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180909 11:01:50.277" starttime="20180909 11:01:49.216"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:01:50.278" starttime="20180909 11:01:49.215"></status>
+</kw>
+<doc>Navigate To Country Drop Down And Verify All Urls</doc>
+<status status="PASS" endtime="20180909 11:01:50.278" critical="yes" starttime="20180909 10:58:26.101"></status>
+</test>
+<status status="PASS" endtime="20180909 11:01:50.279" starttime="20180909 10:58:26.088"></status>
+</suite>
+<suite source="/Users/swapan/AutomationFramework/TestCases/tc4_verify_destination.txt" id="s1-s3" name="Tc4 Verify Destination">
+<test id="s1-s3-t1" name="TC4 Navigate To First Destination And Verify Its URL">
+<kw type="setup" name="Setting Up" library="Common_Keywords">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${test_URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180909 11:01:50.293" level="INFO">Opening browser 'Chrome' to base url 'http://magazine.trivago.com/'</msg>
+<status status="PASS" endtime="20180909 11:02:05.400" starttime="20180909 11:01:50.293"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20180909 11:02:11.402" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20180909 11:02:11.403" starttime="20180909 11:02:05.400"></status>
+</kw>
+<kw name="Set Selenium Speed" library="ExtendedSelenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:02:11.404" starttime="20180909 11:02:11.403"></status>
+</kw>
+<kw name="Register Keyword To Run On Failure" library="ExtendedSelenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Failed Steps</arg>
+</arguments>
+<msg timestamp="20180909 11:02:11.405" level="INFO">Failed Steps will be run on failure.</msg>
+<status status="PASS" endtime="20180909 11:02:11.405" starttime="20180909 11:02:11.404"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:02:11.405" starttime="20180909 11:01:50.292"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${Menu_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:02:12.426" starttime="20180909 11:02:11.407"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:02:12.427" level="INFO">Clicking element '//div[@class="nav-icon"]'.</msg>
+<status status="PASS" endtime="20180909 11:02:18.062" starttime="20180909 11:02:12.426"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:02:18.063" starttime="20180909 11:02:11.406"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${Menu_Destination_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:02:19.094" starttime="20180909 11:02:18.064"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:02:19.095" level="INFO">Clicking element '//div/div[@class="menu-title" and .="Destinations"]'.</msg>
+<status status="PASS" endtime="20180909 11:02:24.722" starttime="20180909 11:02:19.095"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:02:24.722" starttime="20180909 11:02:18.063"></status>
+</kw>
+<kw name="Get Element Attribute" library="ExtendedSelenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>${First_Destination_xpath}@href</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20180909 11:02:26.765" level="INFO">${url} = http://magazine.trivago.com/destination/usa/west/</msg>
+<status status="PASS" endtime="20180909 11:02:26.765" starttime="20180909 11:02:24.723"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20180909 11:02:26.766" level="INFO">http://magazine.trivago.com/destination/usa/west/</msg>
+<status status="PASS" endtime="20180909 11:02:26.767" starttime="20180909 11:02:26.766"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${First_Destination_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:02:26.767" level="INFO">Clicking element '//div[contains(@class,"swiper-slide menu-destination-card")][1]/a'.</msg>
+<status status="PASS" endtime="20180909 11:02:32.397" starttime="20180909 11:02:26.767"></status>
+</kw>
+<kw name="Location Should Contain" library="ExtendedSelenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20180909 11:02:37.958" level="INFO">Current location contains 'http://magazine.trivago.com/destination/usa/west/'.</msg>
+<status status="PASS" endtime="20180909 11:02:37.958" starttime="20180909 11:02:32.398"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Navigated to a destinaton and verified its Url</arg>
+</arguments>
+<msg timestamp="20180909 11:02:37.959" level="INFO">Navigated to a destinaton and verified its Url</msg>
+<status status="PASS" endtime="20180909 11:02:37.959" starttime="20180909 11:02:37.959"></status>
+</kw>
+<kw type="teardown" name="TearDown Steps" library="Common_Keywords">
+<kw name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180909 11:02:39.024" starttime="20180909 11:02:37.961"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:02:39.024" starttime="20180909 11:02:37.960"></status>
+</kw>
+<doc>Navigate To First Destination And Verify Its URL</doc>
+<status status="PASS" endtime="20180909 11:02:39.025" critical="yes" starttime="20180909 11:01:50.292"></status>
+</test>
+<status status="PASS" endtime="20180909 11:02:39.027" starttime="20180909 11:01:50.281"></status>
+</suite>
+<suite source="/Users/swapan/AutomationFramework/TestCases/tc3_verify_newsletter.txt" id="s1-s4" name="Tc3 Verify Newsletter">
+<test id="s1-s4-t1" name="TC3 Subscribe To News Letter And Verify">
+<kw type="setup" name="Setting Up" library="Common_Keywords">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${test_URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180909 11:02:39.049" level="INFO">Opening browser 'Chrome' to base url 'http://magazine.trivago.com/'</msg>
+<status status="PASS" endtime="20180909 11:02:55.174" starttime="20180909 11:02:39.048"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20180909 11:03:01.178" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20180909 11:03:01.178" starttime="20180909 11:02:55.175"></status>
+</kw>
+<kw name="Set Selenium Speed" library="ExtendedSelenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:03:01.180" starttime="20180909 11:03:01.179"></status>
+</kw>
+<kw name="Register Keyword To Run On Failure" library="ExtendedSelenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Failed Steps</arg>
+</arguments>
+<msg timestamp="20180909 11:03:01.182" level="INFO">Failed Steps will be run on failure.</msg>
+<status status="PASS" endtime="20180909 11:03:01.182" starttime="20180909 11:03:01.181"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:03:01.183" starttime="20180909 11:02:39.048"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Search_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Search_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:03:02.226" starttime="20180909 11:03:01.184"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${NewsLetter_CheckBox_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:03:02.227" level="INFO">Scrolling element '//input[@id="confirm"]' into view.</msg>
+<status status="PASS" endtime="20180909 11:03:04.269" starttime="20180909 11:03:02.227"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${NewsLetter_CheckBox_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:03:04.270" level="INFO">Clicking element '//input[@id="confirm"]'.</msg>
+<status status="PASS" endtime="20180909 11:03:09.898" starttime="20180909 11:03:04.270"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${NewsLetter_Email_xpath}</arg>
+<arg>${test_email}</arg>
+</arguments>
+<msg timestamp="20180909 11:03:09.899" level="INFO">Typing text 'test123466@gmail.com' into text field '//div[@class="newsletter-email"]/input[@class="et-email"]'</msg>
+<status status="PASS" endtime="20180909 11:03:17.347" starttime="20180909 11:03:09.899"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180909 11:03:19.349" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180909 11:03:19.349" starttime="20180909 11:03:17.348"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${NewsLetter_InspireMe_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:03:19.350" level="INFO">Clicking element '//div[@class="newsletter-submit"]/button'.</msg>
+<status status="PASS" endtime="20180909 11:03:25.014" starttime="20180909 11:03:19.349"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>12s</arg>
+</arguments>
+<msg timestamp="20180909 11:03:37.017" level="INFO">Slept 12 seconds</msg>
+<status status="PASS" endtime="20180909 11:03:37.017" starttime="20180909 11:03:25.015"></status>
+</kw>
+<kw name="Reload Page" library="ExtendedSelenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" endtime="20180909 11:03:39.471" starttime="20180909 11:03:37.017"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="ExtendedSelenium2Library">
+<doc>Verifies element identified by `locator` is not found on the current page.</doc>
+<arguments>
+<arg>${NewsLetter_InspireMe_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:03:52.501" level="INFO">Current page does not contain element '//div[@class="newsletter-submit"]/button'.</msg>
+<status status="PASS" endtime="20180909 11:03:52.501" starttime="20180909 11:03:39.472"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Subscription Successfully verified</arg>
+</arguments>
+<msg timestamp="20180909 11:03:52.502" level="INFO">Subscription Successfully verified</msg>
+<status status="PASS" endtime="20180909 11:03:52.502" starttime="20180909 11:03:52.502"></status>
+</kw>
+<kw type="teardown" name="TearDown Steps" library="Common_Keywords">
+<kw name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180909 11:03:53.570" starttime="20180909 11:03:52.504"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:03:53.571" starttime="20180909 11:03:52.503"></status>
+</kw>
+<doc>Subscribe To News Letter And Verify</doc>
+<status status="PASS" endtime="20180909 11:03:53.571" critical="yes" starttime="20180909 11:02:39.046"></status>
+</test>
+<status status="PASS" endtime="20180909 11:03:53.574" starttime="20180909 11:02:39.031"></status>
+</suite>
+<suite source="/Users/swapan/AutomationFramework/TestCases/tc5_verify_trendingnow.txt" id="s1-s5" name="Tc5 Verify Trendingnow">
+<test id="s1-s5-t1" name="TC5 Navigate To First Article Of Trending Now Section And Verify All Hotels">
+<kw type="setup" name="Setting Up" library="Common_Keywords">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${test_URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180909 11:03:53.589" level="INFO">Opening browser 'Chrome' to base url 'http://magazine.trivago.com/'</msg>
+<status status="PASS" endtime="20180909 11:04:13.335" starttime="20180909 11:03:53.589"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20180909 11:04:19.338" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20180909 11:04:19.338" starttime="20180909 11:04:13.336"></status>
+</kw>
+<kw name="Set Selenium Speed" library="ExtendedSelenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:04:19.339" starttime="20180909 11:04:19.339"></status>
+</kw>
+<kw name="Register Keyword To Run On Failure" library="ExtendedSelenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Failed Steps</arg>
+</arguments>
+<msg timestamp="20180909 11:04:19.340" level="INFO">Failed Steps will be run on failure.</msg>
+<status status="PASS" endtime="20180909 11:04:19.340" starttime="20180909 11:04:19.340"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:04:19.341" starttime="20180909 11:03:53.589"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Search_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Search_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:04:20.372" starttime="20180909 11:04:19.342"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${Trending_Now_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:04:20.373" level="INFO">Scrolling element '//h2/span[.="Trending Now"]' into view.</msg>
+<status status="PASS" endtime="20180909 11:04:22.420" starttime="20180909 11:04:20.373"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180909 11:04:24.422" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180909 11:04:24.422" starttime="20180909 11:04:22.420"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${Trending_Now_Assets_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:04:25.455" starttime="20180909 11:04:24.424"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:04:25.456" level="INFO">Clicking element '//div[contains(@class,"recent-article-card")][1]/a'.</msg>
+<status status="PASS" endtime="20180909 11:04:31.110" starttime="20180909 11:04:25.455"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:04:31.111" starttime="20180909 11:04:24.423"></status>
+</kw>
+<kw name="Get Webelements" library="ExtendedSelenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${View_Hotel_Btns_xpath}</arg>
+</arguments>
+<assign>
+<var>@{trendingitemsList}</var>
+</assign>
+<msg timestamp="20180909 11:04:32.143" level="INFO">@{trendingitemsList} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-5")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb94...</msg>
+<status status="PASS" endtime="20180909 11:04:32.143" starttime="20180909 11:04:31.112"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{urlList}</var>
+</assign>
+<msg timestamp="20180909 11:04:32.145" level="INFO">@{urlList} = [ ]</msg>
+<status status="PASS" endtime="20180909 11:04:32.145" starttime="20180909 11:04:32.144"></status>
+</kw>
+<kw type="for" name="${ELEMENT} IN [ @{trendingitemsList} ]">
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-5&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:04:35.148" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:04:35.148" starttime="20180909 11:04:32.146"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:04:36.165" starttime="20180909 11:04:35.148"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:04:37.180" starttime="20180909 11:04:36.166"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:04:38.191" level="INFO">https://www.trivago.com/bentonville-34272/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:04:38.192" starttime="20180909 11:04:37.181"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:04:38.192" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-5")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:04:43.240" starttime="20180909 11:04:38.192"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:04:43.240" starttime="20180909 11:04:32.146"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-6&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:04:46.242" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:04:46.242" starttime="20180909 11:04:43.241"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:04:47.261" starttime="20180909 11:04:46.243"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:04:48.291" starttime="20180909 11:04:47.262"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:04:49.313" level="INFO">https://www.trivago.com/eureka-springs-34274/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:04:49.313" starttime="20180909 11:04:48.292"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:04:49.314" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-6")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:04:59.298" starttime="20180909 11:04:49.314"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:04:59.298" starttime="20180909 11:04:43.240"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-7&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:05:02.301" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:05:02.301" starttime="20180909 11:04:59.299"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:03.316" starttime="20180909 11:05:02.301"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:04.353" starttime="20180909 11:05:03.317"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:05.364" level="INFO">https://www.trivago.com/marshall-60099/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:05:05.364" starttime="20180909 11:05:04.353"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:05.365" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-7")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:05:15.099" starttime="20180909 11:05:05.364"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:05:15.099" starttime="20180909 11:04:59.299"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-8&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:05:18.100" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:05:18.100" starttime="20180909 11:05:15.099"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:19.116" starttime="20180909 11:05:18.102"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:20.129" starttime="20180909 11:05:19.116"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:21.149" level="INFO">https://www.trivago.com/helena-60087/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:05:21.150" starttime="20180909 11:05:20.130"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:21.150" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-8")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:05:31.431" starttime="20180909 11:05:21.150"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:05:31.432" starttime="20180909 11:05:15.099"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-9&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:05:34.435" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:05:34.435" starttime="20180909 11:05:31.433"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:35.455" starttime="20180909 11:05:34.435"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:36.469" starttime="20180909 11:05:35.456"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:37.491" level="INFO">https://www.trivago.com/hot-springs-34277/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:05:37.491" starttime="20180909 11:05:36.470"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:37.492" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-9")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:05:47.588" starttime="20180909 11:05:37.491"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:05:47.588" starttime="20180909 11:05:31.432"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-10&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:05:50.591" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:05:50.592" starttime="20180909 11:05:47.588"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:51.645" starttime="20180909 11:05:50.592"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:05:52.668" starttime="20180909 11:05:51.645"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:53.702" level="INFO">https://www.trivago.com/little-rock-34279/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:05:53.703" starttime="20180909 11:05:52.668"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:05:53.705" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-10")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:06:03.582" starttime="20180909 11:05:53.703"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:06:03.582" starttime="20180909 11:05:47.588"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-11&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:06:06.583" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:06:06.584" starttime="20180909 11:06:03.582"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:06:07.605" starttime="20180909 11:06:06.584"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:06:08.625" starttime="20180909 11:06:07.605"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:06:09.638" level="INFO">https://www.trivago.com/mena-60088/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:06:09.639" starttime="20180909 11:06:08.625"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:06:09.639" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-11")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:06:19.366" starttime="20180909 11:06:09.639"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:06:19.366" starttime="20180909 11:06:03.582"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-12&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:06:22.368" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:06:22.368" starttime="20180909 11:06:19.366"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:06:23.388" starttime="20180909 11:06:22.369"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:06:24.402" starttime="20180909 11:06:23.388"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:06:25.411" level="INFO">https://www.trivago.com/hope-60089/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:06:25.411" starttime="20180909 11:06:24.403"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:06:25.412" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-12")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:06:35.151" starttime="20180909 11:06:25.411"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:06:35.151" starttime="20180909 11:06:19.366"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;de519eb941cc699ab661876fd36489e3&quot;, element=&quot;0.29422490251845934-13&quot;)&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180909 11:06:38.153" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:06:38.153" starttime="20180909 11:06:35.151"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:06:39.172" starttime="20180909 11:06:38.154"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${urlList}</arg>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:06:40.202" starttime="20180909 11:06:39.173"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT.get_attribute('href')}</arg>
+</arguments>
+<msg timestamp="20180909 11:06:41.214" level="INFO">https://www.trivago.com/gamaliel-60138/hotel/?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:06:41.214" starttime="20180909 11:06:40.203"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180909 11:06:41.215" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="de519eb941cc699ab661876fd36489e3", element="0.29422490251845934-13")&gt;'.</msg>
+<status status="PASS" endtime="20180909 11:06:51.098" starttime="20180909 11:06:41.215"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:06:51.099" starttime="20180909 11:06:35.151"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:06:51.099" starttime="20180909 11:04:32.145"></status>
+</kw>
+<kw name="Modified Url Format" library="ApplicationLibrary">
+<arguments>
+<arg>${urlList}</arg>
+</arguments>
+<assign>
+<var>${urlListFromButton}</var>
+</assign>
+<msg timestamp="20180909 11:06:51.100" level="INFO">${urlListFromButton} = [u'https://www.trivago.com/bentonville-34272/hotel?cip=1110000000003', u'https://www.trivago.com/eureka-springs-34274/hotel?cip=1110000000003', u'https://www.trivago.com/marshall-60099/hotel?cip=11100...</msg>
+<status status="PASS" endtime="20180909 11:06:51.100" starttime="20180909 11:06:51.099"></status>
+</kw>
+<kw name="List Windows" library="ExtendedSelenium2Library">
+<doc>Return all current window handles as a list</doc>
+<assign>
+<var>@{Windows_List}</var>
+</assign>
+<msg timestamp="20180909 11:06:52.110" level="INFO">@{Windows_List} = [ CDwindow-23C2E289EDEC7A17EA8F2AACE16E19D7 | CDwindow-777E4B0A2200C81B2D5C35BBE6B459FB | CDwindow-6C7E7619EB989918F2142C3921B488A6 | CDwindow-D198F24509E6DCB25FE1FAF77EF770A0 | CDwindow-2C117B7E35689...</msg>
+<status status="PASS" endtime="20180909 11:06:52.111" starttime="20180909 11:06:51.101"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{actualUrlList}</var>
+</assign>
+<msg timestamp="20180909 11:06:52.111" level="INFO">@{actualUrlList} = [ ]</msg>
+<status status="PASS" endtime="20180909 11:06:52.111" starttime="20180909 11:06:52.111"></status>
+</kw>
+<kw type="for" name="${current_window} IN [ @{Windows_List} ]">
+<kw type="foritem" name="${current_window} = CDwindow-23C2E289EDEC7A17EA8F2AACE16E19D7">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:06:56.156" starttime="20180909 11:06:52.112"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:07:01.735" level="INFO">${check_url} = http://magazine.trivago.com/weekend-getaways-in-arkansas/</msg>
+<status status="PASS" endtime="20180909 11:07:01.735" starttime="20180909 11:06:56.156"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:07:01.736" starttime="20180909 11:07:01.735"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:07:01.736" starttime="20180909 11:06:52.112"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-777E4B0A2200C81B2D5C35BBE6B459FB">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:07:08.808" starttime="20180909 11:07:01.737"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:07:14.433" level="INFO">${check_url} = https://www.trivago.com/gamaliel-60138/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:07:14.433" starttime="20180909 11:07:08.808"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:07:14.434" starttime="20180909 11:07:14.433"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:07:14.434" starttime="20180909 11:07:01.737"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-6C7E7619EB989918F2142C3921B488A6">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:07:24.568" starttime="20180909 11:07:14.435"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:07:30.157" level="INFO">${check_url} = https://www.trivago.com/hope-60089/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:07:30.157" starttime="20180909 11:07:24.569"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:07:30.158" starttime="20180909 11:07:30.157"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:07:30.158" starttime="20180909 11:07:14.434"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-D198F24509E6DCB25FE1FAF77EF770A0">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:07:43.318" starttime="20180909 11:07:30.158"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:07:48.958" level="INFO">${check_url} = https://www.trivago.com/mena-60088/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:07:48.958" starttime="20180909 11:07:43.318"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:07:48.959" starttime="20180909 11:07:48.958"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:07:48.959" starttime="20180909 11:07:30.158"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-2C117B7E35689E2AC7849D977A8DCBA5">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:08:05.136" starttime="20180909 11:07:48.959"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:08:10.737" level="INFO">${check_url} = https://www.trivago.com/little-rock-34279/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:08:10.737" starttime="20180909 11:08:05.137"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:08:10.738" starttime="20180909 11:08:10.738"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:08:10.738" starttime="20180909 11:07:48.959"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-4E14F517BDB229C21A034AA49B45BF27">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:08:29.952" starttime="20180909 11:08:10.738"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:08:35.572" level="INFO">${check_url} = https://www.trivago.com/hot-springs-34277/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:08:35.573" starttime="20180909 11:08:29.952"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:08:35.574" starttime="20180909 11:08:35.573"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:08:35.574" starttime="20180909 11:08:10.738"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-3EABD35A2F06F3D3AF5FF256BC6F75C8">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:08:57.838" starttime="20180909 11:08:35.574"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:09:03.458" level="INFO">${check_url} = https://www.trivago.com/helena-60087/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:09:03.458" starttime="20180909 11:08:57.839"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:09:03.459" starttime="20180909 11:09:03.458"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:09:03.459" starttime="20180909 11:08:35.574"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-EC8AEAE1B21E4EEA89DA53B7D9FC48B2">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:09:28.764" starttime="20180909 11:09:03.459"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:09:34.364" level="INFO">${check_url} = https://www.trivago.com/marshall-60099/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:09:34.364" starttime="20180909 11:09:28.765"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:09:34.365" starttime="20180909 11:09:34.364"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:09:34.365" starttime="20180909 11:09:03.459"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-3817BD982601BD7948709609A14756BD">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:10:02.711" starttime="20180909 11:09:34.366"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:10:08.326" level="INFO">${check_url} = https://www.trivago.com/eureka-springs-34274/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:10:08.326" starttime="20180909 11:10:02.711"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:10:08.327" starttime="20180909 11:10:08.326"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:10:08.327" starttime="20180909 11:09:34.366"></status>
+</kw>
+<kw type="foritem" name="${current_window} = CDwindow-238700F5FB406DB51F4245FD01C354E0">
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>${current_window}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:10:39.662" starttime="20180909 11:10:08.327"></status>
+</kw>
+<kw name="Get Location" library="ExtendedSelenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${check_url}</var>
+</assign>
+<msg timestamp="20180909 11:10:45.277" level="INFO">${check_url} = https://www.trivago.com/bentonville-34272/hotel?cip=1110000000003</msg>
+<status status="PASS" endtime="20180909 11:10:45.277" starttime="20180909 11:10:39.663"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${actualUrlList}</arg>
+<arg>${check_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:10:45.278" starttime="20180909 11:10:45.278"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:10:45.278" starttime="20180909 11:10:08.327"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:10:45.279" starttime="20180909 11:06:52.112"></status>
+</kw>
+<kw name="Modified Url Format" library="ApplicationLibrary">
+<arguments>
+<arg>${actualUrlList}</arg>
+</arguments>
+<assign>
+<var>${urlListFromOpenedWindows}</var>
+</assign>
+<msg timestamp="20180909 11:10:45.280" level="INFO">${urlListFromOpenedWindows} = [u'http://magazine.trivago.com/weekend-getaways-in-arkansas/', u'https://www.trivago.com/gamaliel-60138/hotel?cip=1110000000003', u'https://www.trivago.com/hope-60089/hotel?cip=1110000000003', u'https...</msg>
+<status status="PASS" endtime="20180909 11:10:45.280" starttime="20180909 11:10:45.279"></status>
+</kw>
+<kw name="List Should Contain Sub List" library="Collections">
+<doc>Fails if not all of the elements in ``list2`` are found in ``list1``.</doc>
+<arguments>
+<arg>${urlListFromOpenedWindows}</arg>
+<arg>${urlListFromButton}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:10:45.281" starttime="20180909 11:10:45.281"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Verified All Hotel Links Successfully</arg>
+</arguments>
+<msg timestamp="20180909 11:10:45.282" level="INFO">Verified All Hotel Links Successfully</msg>
+<status status="PASS" endtime="20180909 11:10:45.282" starttime="20180909 11:10:45.282"></status>
+</kw>
+<kw type="teardown" name="TearDown Steps" library="Common_Keywords">
+<kw name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180909 11:10:46.352" starttime="20180909 11:10:45.284"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:10:46.353" starttime="20180909 11:10:45.283"></status>
+</kw>
+<doc>Navigate To First Asset Of Trending Now Section And Verify All Hotels</doc>
+<status status="PASS" endtime="20180909 11:10:46.353" critical="yes" starttime="20180909 11:03:53.588"></status>
+</test>
+<status status="PASS" endtime="20180909 11:10:46.355" starttime="20180909 11:03:53.578"></status>
+</suite>
+<suite source="/Users/swapan/AutomationFramework/TestCases/tc2_submit_contact.txt" id="s1-s6" name="Tc2 Submit Contact">
+<test id="s1-s6-t1" name="TC2 Submit Contact">
+<kw type="setup" name="Setting Up" library="Common_Keywords">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${test_URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180909 11:10:46.376" level="INFO">Opening browser 'Chrome' to base url 'http://magazine.trivago.com/'</msg>
+<status status="PASS" endtime="20180909 11:11:06.105" starttime="20180909 11:10:46.375"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20180909 11:11:12.110" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20180909 11:11:12.110" starttime="20180909 11:11:06.106"></status>
+</kw>
+<kw name="Set Selenium Speed" library="ExtendedSelenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:11:12.111" starttime="20180909 11:11:12.110"></status>
+</kw>
+<kw name="Register Keyword To Run On Failure" library="ExtendedSelenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Failed Steps</arg>
+</arguments>
+<msg timestamp="20180909 11:11:12.112" level="INFO">Failed Steps will be run on failure.</msg>
+<status status="PASS" endtime="20180909 11:11:12.112" starttime="20180909 11:11:12.111"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:11:12.112" starttime="20180909 11:10:46.375"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180909 11:11:14.115" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180909 11:11:14.116" starttime="20180909 11:11:12.113"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Search_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Search_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:11:15.149" starttime="20180909 11:11:14.116"></status>
+</kw>
+<kw name="Scroll Element Into View" library="ExtendedSelenium2Library">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${Contact_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:11:15.150" level="INFO">Scrolling element '//a[@href="/contact/"]' into view.</msg>
+<status status="PASS" endtime="20180909 11:11:17.194" starttime="20180909 11:11:15.149"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${Contact_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:11:18.217" starttime="20180909 11:11:17.196"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:11:18.218" level="INFO">Clicking element '//a[@href="/contact/"]'.</msg>
+<status status="PASS" endtime="20180909 11:11:23.932" starttime="20180909 11:11:18.218"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:11:23.932" starttime="20180909 11:11:17.195"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20180909 11:11:27.936" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20180909 11:11:27.936" starttime="20180909 11:11:23.932"></status>
+</kw>
+<kw name="Select Window" library="ExtendedSelenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>url=${contact_url}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:11:37.072" starttime="20180909 11:11:27.937"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Contact_Mesg_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_mesg} ${Contact_Mesg_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:11:38.097" starttime="20180909 11:11:37.073"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Contact_Mesg_xpath}</arg>
+<arg>${Contact_Mesg}</arg>
+</arguments>
+<msg timestamp="20180909 11:11:38.098" level="INFO">Typing text 'I Love Trivago' into text field '//textarea[@class="contact-msg"]'</msg>
+<status status="PASS" endtime="20180909 11:11:45.423" starttime="20180909 11:11:38.098"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Contact_FullName_xpath}</arg>
+<arg>${full_name}</arg>
+</arguments>
+<msg timestamp="20180909 11:11:45.425" level="INFO">Typing text 'Swapan Chhabra' into text field '//div/input[@class="contact-input"]'</msg>
+<status status="PASS" endtime="20180909 11:11:52.732" starttime="20180909 11:11:45.424"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Contact_Email_xpath}</arg>
+<arg>${contact_email}</arg>
+</arguments>
+<msg timestamp="20180909 11:11:52.734" level="INFO">Typing text 'swapan.chhabra@gmail.com' into text field '//input[@id="contact-email"]'</msg>
+<status status="PASS" endtime="20180909 11:12:00.168" starttime="20180909 11:11:52.733"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Contact_SubmitCheckBox_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:12:00.169" level="INFO">Clicking element '//input[@id="confirm"]'.</msg>
+<status status="PASS" endtime="20180909 11:12:05.834" starttime="20180909 11:12:00.169"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180909 11:12:08.836" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180909 11:12:08.836" starttime="20180909 11:12:05.834"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Contact_Submit_xpath}</arg>
+</arguments>
+<msg timestamp="20180909 11:12:08.838" level="INFO">Clicking element '//button[@class="contact-submit"]'.</msg>
+<status status="PASS" endtime="20180909 11:12:14.482" starttime="20180909 11:12:08.837"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180909 11:12:19.486" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180909 11:12:19.486" starttime="20180909 11:12:14.483"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Message_Sent_xpath}</arg>
+<arg>40s</arg>
+<arg>${error_mesg} ${Message_Sent_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20180909 11:12:20.515" starttime="20180909 11:12:19.487"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Contact Submitted Successfully</arg>
+</arguments>
+<msg timestamp="20180909 11:12:20.516" level="INFO">Contact Submitted Successfully</msg>
+<status status="PASS" endtime="20180909 11:12:20.516" starttime="20180909 11:12:20.515"></status>
+</kw>
+<kw type="teardown" name="TearDown Steps" library="Common_Keywords">
+<kw name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180909 11:12:21.590" starttime="20180909 11:12:20.518"></status>
+</kw>
+<status status="PASS" endtime="20180909 11:12:21.591" starttime="20180909 11:12:20.517"></status>
+</kw>
+<doc>Navigate to Contact Form And Verify</doc>
+<status status="PASS" endtime="20180909 11:12:21.592" critical="yes" starttime="20180909 11:10:46.374"></status>
+</test>
+<status status="PASS" endtime="20180909 11:12:21.595" starttime="20180909 11:10:46.359"></status>
+</suite>
+<status status="PASS" endtime="20180909 11:12:21.598" starttime="20180909 10:57:36.572"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="6">Critical Tests</stat>
+<stat fail="0" pass="6">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestCases" pass="6">TestCases</stat>
+<stat fail="0" id="s1-s1" name="Tc1 Verify Search" pass="1">TestCases.Tc1 Verify Search</stat>
+<stat fail="0" id="s1-s2" name="Tc6 Verify Countries" pass="1">TestCases.Tc6 Verify Countries</stat>
+<stat fail="0" id="s1-s3" name="Tc4 Verify Destination" pass="1">TestCases.Tc4 Verify Destination</stat>
+<stat fail="0" id="s1-s4" name="Tc3 Verify Newsletter" pass="1">TestCases.Tc3 Verify Newsletter</stat>
+<stat fail="0" id="s1-s5" name="Tc5 Verify Trendingnow" pass="1">TestCases.Tc5 Verify Trendingnow</stat>
+<stat fail="0" id="s1-s6" name="Tc2 Submit Contact" pass="1">TestCases.Tc2 Submit Contact</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

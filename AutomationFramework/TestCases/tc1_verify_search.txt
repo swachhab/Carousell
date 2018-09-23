@@ -1,0 +1,22 @@
+*** Settings ***
+Library    AppiumLibrary
+Library    Collections
+Resource    ../Locators/Locators_Lib.txt
+Resource           ../Library/Common_Keywords.txt
+Library           ../Library/ApplicationLibrary.py
+
+Test Setup    Setting Up  
+Test Teardown    TearDown Steps
+
+*** TestCase ***
+
+TC1 Verify Search
+    [Documentation]    Verify Search By Entering A Location
+
+    Wait And Click On Element    ${Search_xpath}
+    Wait Until Page Contains Element    ${Search_TextBox_xpath}    30s    ${error_mesg} ${Search_TextBox_xpath}
+    Input Text    ${Search_TextBox_xpath}    ${location}
+    Press Key    ${Search_TextBox_xpath}    \\13
+    Wait Until Page Contains Element    ${Search_Result_xpath}    30s    ${error_mesg} ${Search_Result_xpath}
+    Wait Until Page Contains Element    ${first_article_city_xpath}    30s    ${error_mesg} ${first_article_city_xpath}
+    Log     Search result successfully verified
