@@ -1,0 +1,64 @@
+*** Settings ***
+Library    		AppiumLibrary
+Library    		Collections
+Resource    	../Locators/Locators_Lib.txt
+Resource        ../Library/Common_Keywords.txt
+Library         ../Library/ApplicationLibrary.py
+Variables      ../Library/LoadConfigVariables.py     CONFIG
+Library         AppiumLibrary   run_on_failure=Log Source   
+Test Teardown    Close Application
+
+*** Variables ***
+${remote_url}=		http://0.0.0.0:4723/wd/hub
+${SearchCar}=    Porsche
+*** TestCase ***
+
+TC001 Search Functionality
+    [Documentation]    Verify Search Functionality By Searching Brand Name
+    [Tags]       Search     Regression     Carousell
+    Launch Application     ${remote_url}
+    Login App
+    Select Car From Categories And Select For Sale
+    Search With Brand Name
+    Select First Search Result And Validate Brand Name
+
+*** Keywords ***
+Select Car From Categories And Select For Sale
+	[Documentation] 	Select car from categories and select sale
+    Wait And Click On Element    ${category_car_xpath}
+    Wait Until Page Contains    ${for_sale_text}    30s    ${error_message} ${for_sale_text}
+    Click Text     ${for_sale_text}
+
+Search With Brand Name
+    [Documentation]    Search car with brand name in search text field
+    Wait And Click On Element    ${search_xpath}
+    Wait Until Page Contains Element    ${search_car_xpath}    30s    ${error_message} ${search_car_xpath}
+    Input Text     ${search_car_xpath}          ${SearchCar}
+    Sleep    2
+    #Press Enter
+    Press Keycode     66
+    Sleep    2
+    #Press Enter
+    Press Keycode     66
+    Sleep   2
+    Wait And Click On Element    ${search_button_xpath}
+    #Wait Until Page Contains     ${SearchCar}      30
+
+
+Select First Search Result And Validate Brand Name
+    [Documentation]    Select first search result and validate if page contains brand name.
+    Sleep    2
+    ${LocatorVisible}=    Run Keyword And Return Status     Wait Until Page Contains Element   ${ok_got1_xpath}     22       ${errorMessage}
+    Run Keyword If    '${LocatorVisible}'=='True'    Click Element    ${ok_got1_xpath}
+    Wait And Click On Element    ${first_search_result_xpath}
+    ${LocatorVisible}=    Run Keyword And Return Status     Wait Until Page Contains Element    ${ok_got_xpath}     22       ${errorMessage}
+    Run Keyword If    '${LocatorVisible}'=='True'    Click Element    ${ok_got_xpath}
+    ${LocatorVisible}=    Run Keyword And Return Status     Wait Until Page Contains Element   ${ok_got_xpath}     22       ${errorMessage}
+    Run Keyword If    '${LocatorVisible}'=='True'    Click Element    ${ok_got_xpath}
+    Sleep   2
+    Wait Until Page Contains Element    ${title_desc_xpath}    30s    ${error_message} ${title_desc_xpath}
+    ${TitleText}=    Get Text    ${title_desc_xpath}
+    Should Contain      ${TitleText}    ${SearchCar}      
+    #Wait Until Page Contains     ${SearchCar}      30
+
+

@@ -1,0 +1,41 @@
+*** Settings ***
+Library    AppiumLibrary
+Library    Collections
+Library    String
+Resource   ../Locators/Locators_Lib.txt
+Library    ../Library/ApplicationLibrary.py
+Variables      LoadConfigVariables.py     CONFIG
+
+*** Variables ***
+${error_message}=     element not found - 
+${appiumTimeout}=      4000
+${uname}=      swapan.chhabra126@gmail.com
+${pwd}=       FancyaLassi
+
+*** Keywords ***
+
+Launch Application
+    [Documentation]   Launching App ${remote_url}
+    [Arguments]   ${remote_url}
+    #${systemport}=    Convert To Integer    ${systemport}
+    #Run Keyword If   '${platformname}' == 'android'    Clear App    ${dev}
+    
+    ${app2}=   Open Application  ${remote_url}  platformName=${CONFIG.Device1.platformname}      deviceName=${CONFIG.Device1.devicename}   platformVersion=${CONFIG.Device1.platformversion}    appPackage=${CONFIG.Settings.apppackage}   appActivity=${CONFIG.Settings.appactivity}    appwaitactivity=${CONFIG.Settings.appwaitactivity}    newCommandTimeout=${appiumTimeout}    automationName=${CONFIG.Settings.automationname}    systemPort=${CONFIG.Device1.systemport}
+
+    Set Suite Variable   ${App_var2}   ${app2}
+
+Login App
+    Wait And Click On Element     ${log_in_xpath}
+    Wait And Click On Element    ${none_above_xpath}
+    Wait Until Page Contains Element    ${login_username_xpath}    30s    ${error_message} ${login_username_xpath}
+    Click Element    ${login_username_xpath}
+    Input Text    ${login_username_xpath}    ${uname}
+    Input Text    ${login_password_xpath}    ${pwd}
+    Click Element     ${login_login_xpath}
+
+Wait And Click On Element
+    [Documentation]    Wait till 30 sec and click if element found
+    [Arguments]    ${Element_xpath}
+    
+    Wait Until Page Contains Element    ${Element_xpath}    30s    ${error_message} ${Element_xpath}
+    Click Element    ${Element_xpath} 

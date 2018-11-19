@@ -1,0 +1,34 @@
+*** Settings ***
+Library    		AppiumLibrary
+Library    		Collections
+Resource    	../Locators/Locators_Lib.txt
+Resource        ../Library/Common_Keywords.txt
+Library         ../Library/ApplicationLibrary.py
+Variables      ../Library/LoadConfigVariables.py     CONFIG
+   
+Test Teardown    Close Application
+
+*** Variables ***
+${remote_url}=		http://0.0.0.0:4723/wd/hub
+
+*** TestCase ***
+
+TC001 Verify Login
+    [Documentation]    Verify Login Test Case Using Facebook Login
+    [Tags]       Login     Regression     Carblip
+    Launch IOSApplication     ${remote_url}
+    Verify Logout App
+    Login App
+
+*** Keywords ***
+Verify Logout App
+	[Documentation] 	Verify App Should Be Logged In Login 
+    Sleep    2s
+    ${menuPresent}=    Run Keyword And Return Status    Wait Until Page Contains Element    ${menu_xpath}    60    ${error_message} ${menu_xpath}
+    Run Keyword If    '${menuPresent}'=='True'    Logout App
+
+
+
+
+
+

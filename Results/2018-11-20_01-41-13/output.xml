@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181120 01:41:13.497" generator="Robot 3.0.4 (Python 2.7.10 on darwin)">
+<suite source="/Users/swapan/AutomateMobile_Carousell/TestCases/tc001_search_functionality.txt" id="s1" name="CAROUSELL">
+<test id="s1-t1" name="TC001 Search Functionality">
+<kw name="Launch Application" library="Common_Keywords">
+<doc>Launching App http://0.0.0.0:4723/wd/hub</doc>
+<arguments>
+<arg>${remote_url}</arg>
+</arguments>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>platformName=${CONFIG.Device1.platformname}</arg>
+<arg>deviceName=${CONFIG.Device1.devicename}</arg>
+<arg>platformVersion=${CONFIG.Device1.platformversion}</arg>
+<arg>appPackage=${CONFIG.Settings.apppackage}</arg>
+<arg>appActivity=${CONFIG.Settings.appactivity}</arg>
+<arg>appwaitactivity=${CONFIG.Settings.appwaitactivity}</arg>
+<arg>newCommandTimeout=${appiumTimeout}</arg>
+<arg>automationName=${CONFIG.Settings.automationname}</arg>
+<arg>systemPort=${CONFIG.Device1.systemport}</arg>
+</arguments>
+<assign>
+<var>${app2}</var>
+</assign>
+<msg timestamp="20181120 01:41:29.659" level="INFO">${app2} = 1</msg>
+<status status="PASS" endtime="20181120 01:41:29.659" starttime="20181120 01:41:13.732"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${App_var2}</arg>
+<arg>${app2}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:29.663" level="INFO">${App_var2} = 1</msg>
+<status status="PASS" endtime="20181120 01:41:29.664" starttime="20181120 01:41:29.660"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:41:29.664" starttime="20181120 01:41:13.732"></status>
+</kw>
+<kw name="Login App" library="Common_Keywords">
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${log_in_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:41:30.850" starttime="20181120 01:41:29.667"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:30.851" level="INFO">Clicking element 'id=com.thecarousell.Carousell:id/welcome_page_login_button'.</msg>
+<status status="PASS" endtime="20181120 01:41:31.206" starttime="20181120 01:41:30.850"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:41:31.206" starttime="20181120 01:41:29.666"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${none_above_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:41:34.179" starttime="20181120 01:41:31.208"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:34.181" level="INFO">Clicking element 'id=com.google.android.gms:id/cancel'.</msg>
+<status status="PASS" endtime="20181120 01:41:34.597" starttime="20181120 01:41:34.180"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:41:34.597" starttime="20181120 01:41:31.207"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${login_username_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${login_username_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:41:36.988" starttime="20181120 01:41:34.598"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${login_username_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:36.989" level="INFO">Clicking element '//android.widget.EditText[@text="email or username"]'.</msg>
+<status status="PASS" endtime="20181120 01:41:37.377" starttime="20181120 01:41:36.988"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${login_username_xpath}</arg>
+<arg>${uname}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:37.378" level="INFO">Typing text 'swapan.chhabra126@gmail.com' into text field '//android.widget.EditText[@text="email or username"]'</msg>
+<status status="PASS" endtime="20181120 01:41:38.887" starttime="20181120 01:41:37.377"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${login_password_xpath}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:38.888" level="INFO">Typing text 'FancyaLassi' into text field '//android.widget.EditText[@text="password"]'</msg>
+<status status="PASS" endtime="20181120 01:41:40.317" starttime="20181120 01:41:38.887"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${login_login_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:40.318" level="INFO">Clicking element 'id=com.thecarousell.Carousell:id/login_page_login_button'.</msg>
+<status status="PASS" endtime="20181120 01:41:40.983" starttime="20181120 01:41:40.317"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:41:40.983" starttime="20181120 01:41:29.665"></status>
+</kw>
+<kw name="Select Car From Categories And Select For Sale">
+<doc>Select car from categories and select sale</doc>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${category_car_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:41:50.901" starttime="20181120 01:41:40.984"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:50.902" level="INFO">Clicking element '//android.widget.RelativeLayout[@resource-id="com.thecarousell.Carousell:id/home_page_category_icon"]/android.widget.TextView[@text="Cars"]'.</msg>
+<status status="PASS" endtime="20181120 01:41:52.363" starttime="20181120 01:41:50.902"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:41:52.363" starttime="20181120 01:41:40.984"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${for_sale_text}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${for_sale_text}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:41:56.237" starttime="20181120 01:41:52.364"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${for_sale_text}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:41:57.012" starttime="20181120 01:41:56.237"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:41:57.012" starttime="20181120 01:41:40.984"></status>
+</kw>
+<kw name="Search With Brand Name">
+<doc>Search car with brand name in search text field</doc>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${search_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:41:58.658" starttime="20181120 01:41:57.016"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:41:58.659" level="INFO">Clicking element 'id=com.thecarousell.Carousell:id/tv_search'.</msg>
+<status status="PASS" endtime="20181120 01:41:59.128" starttime="20181120 01:41:58.658"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:41:59.128" starttime="20181120 01:41:57.014"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${search_car_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${search_car_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:01.216" starttime="20181120 01:41:59.128"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_car_xpath}</arg>
+<arg>${SearchCar}</arg>
+</arguments>
+<msg timestamp="20181120 01:42:01.218" level="INFO">Typing text 'Porsche' into text field 'id=com.thecarousell.Carousell:id/et_search'</msg>
+<status status="PASS" endtime="20181120 01:42:02.107" starttime="20181120 01:42:01.217"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181120 01:42:04.108" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181120 01:42:04.108" starttime="20181120 01:42:02.107"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>66</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:04.201" starttime="20181120 01:42:04.109"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181120 01:42:06.203" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181120 01:42:06.204" starttime="20181120 01:42:04.202"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>66</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:06.305" starttime="20181120 01:42:06.204"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181120 01:42:08.306" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181120 01:42:08.307" starttime="20181120 01:42:06.305"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${search_button_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:08.454" starttime="20181120 01:42:08.308"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:42:08.455" level="INFO">Clicking element 'id=com.thecarousell.Carousell:id/btn_search'.</msg>
+<status status="PASS" endtime="20181120 01:42:08.604" starttime="20181120 01:42:08.454"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:42:08.604" starttime="20181120 01:42:08.307"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:42:08.605" starttime="20181120 01:41:57.013"></status>
+</kw>
+<kw name="Select First Search Result And Validate Brand Name">
+<doc>Select first search result and validate if page contains brand name.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181120 01:42:10.607" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181120 01:42:10.608" starttime="20181120 01:42:08.606"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${ok_got1_xpath}</arg>
+<arg>22</arg>
+<arg>${errorMessage}</arg>
+</arguments>
+<assign>
+<var>${LocatorVisible}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${ok_got1_xpath}</arg>
+<arg>22</arg>
+<arg>${errorMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:10.736" starttime="20181120 01:42:10.610"></status>
+</kw>
+<msg timestamp="20181120 01:42:10.736" level="INFO">${LocatorVisible} = True</msg>
+<status status="PASS" endtime="20181120 01:42:10.736" starttime="20181120 01:42:10.609"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${LocatorVisible}'=='True'</arg>
+<arg>Click Element</arg>
+<arg>${ok_got1_xpath}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ok_got1_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:42:10.739" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.thecarousell.Carousell:id/feature_button" and @text="Ok, got it!"]'.</msg>
+<status status="PASS" endtime="20181120 01:42:10.903" starttime="20181120 01:42:10.738"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:42:10.904" starttime="20181120 01:42:10.737"></status>
+</kw>
+<kw name="Wait And Click On Element" library="Common_Keywords">
+<doc>Wait till 30 sec and click if element found</doc>
+<arguments>
+<arg>${first_search_result_xpath}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${Element_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:12.218" starttime="20181120 01:42:10.905"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Element_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:42:12.219" level="INFO">Clicking element '//android.view.ViewGroup[@resource-id="com.thecarousell.Carousell:id/card_product" and @index='4']'.</msg>
+<status status="PASS" endtime="20181120 01:42:13.096" starttime="20181120 01:42:12.218"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:42:13.096" starttime="20181120 01:42:10.904"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${ok_got_xpath}</arg>
+<arg>22</arg>
+<arg>${errorMessage}</arg>
+</arguments>
+<assign>
+<var>${LocatorVisible}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${ok_got_xpath}</arg>
+<arg>22</arg>
+<arg>${errorMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:15.271" starttime="20181120 01:42:13.098"></status>
+</kw>
+<msg timestamp="20181120 01:42:15.271" level="INFO">${LocatorVisible} = True</msg>
+<status status="PASS" endtime="20181120 01:42:15.271" starttime="20181120 01:42:13.097"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${LocatorVisible}'=='True'</arg>
+<arg>Click Element</arg>
+<arg>${ok_got_xpath}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ok_got_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:42:15.273" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.thecarousell.Carousell:id/feature_button" and @text="OK, Got it!"]'.</msg>
+<status status="PASS" endtime="20181120 01:42:15.444" starttime="20181120 01:42:15.272"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:42:15.444" starttime="20181120 01:42:15.272"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${ok_got_xpath}</arg>
+<arg>22</arg>
+<arg>${errorMessage}</arg>
+</arguments>
+<assign>
+<var>${LocatorVisible}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${ok_got_xpath}</arg>
+<arg>22</arg>
+<arg>${errorMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:16.128" starttime="20181120 01:42:15.445"></status>
+</kw>
+<msg timestamp="20181120 01:42:16.128" level="INFO">${LocatorVisible} = True</msg>
+<status status="PASS" endtime="20181120 01:42:16.129" starttime="20181120 01:42:15.444"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${LocatorVisible}'=='True'</arg>
+<arg>Click Element</arg>
+<arg>${ok_got_xpath}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ok_got_xpath}</arg>
+</arguments>
+<msg timestamp="20181120 01:42:16.131" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.thecarousell.Carousell:id/feature_button" and @text="OK, Got it!"]'.</msg>
+<status status="PASS" endtime="20181120 01:42:16.295" starttime="20181120 01:42:16.130"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:42:16.295" starttime="20181120 01:42:16.129"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181120 01:42:18.296" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181120 01:42:18.297" starttime="20181120 01:42:16.295"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${title_desc_xpath}</arg>
+<arg>30s</arg>
+<arg>${error_message} ${title_desc_xpath}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:18.560" starttime="20181120 01:42:18.297"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${title_desc_xpath}</arg>
+</arguments>
+<assign>
+<var>${TitleText}</var>
+</assign>
+<msg timestamp="20181120 01:42:18.850" level="INFO">Element 'id=com.thecarousell.Carousell:id/tvInfo' text is 'Porsche Cayenne 3.2 V6 Auto' </msg>
+<msg timestamp="20181120 01:42:18.851" level="INFO">${TitleText} = Porsche Cayenne 3.2 V6 Auto</msg>
+<status status="PASS" endtime="20181120 01:42:18.851" starttime="20181120 01:42:18.561"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${TitleText}</arg>
+<arg>${SearchCar}</arg>
+</arguments>
+<status status="PASS" endtime="20181120 01:42:18.853" starttime="20181120 01:42:18.852"></status>
+</kw>
+<status status="PASS" endtime="20181120 01:42:18.853" starttime="20181120 01:42:08.605"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20181120 01:42:19.212" starttime="20181120 01:42:18.854"></status>
+</kw>
+<doc>Verify Search Functionality By Searching Brand Name</doc>
+<tags>
+<tag>Carousell</tag>
+<tag>Regression</tag>
+<tag>Search</tag>
+</tags>
+<status status="PASS" endtime="20181120 01:42:19.213" critical="yes" starttime="20181120 01:41:13.730"></status>
+</test>
+<status status="PASS" endtime="20181120 01:42:19.213" starttime="20181120 01:41:13.500"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Carousell</stat>
+<stat fail="0" pass="1">Regression</stat>
+<stat fail="0" pass="1">Search</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="CAROUSELL" pass="1">CAROUSELL</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

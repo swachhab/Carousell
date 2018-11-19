@@ -1,0 +1,19 @@
+*** Variables ***
+
+${log_in_xpath}=     id=com.thecarousell.Carousell:id/welcome_page_login_button
+${none_above_xpath}=    id=com.google.android.gms:id/cancel
+#${login_username_xpath}=     id=com.thecarousell.Carousell:id/login_page_username_text_field
+${login_username_xpath}=     //android.widget.EditText[@text="email or username"]
+#${login_password_xpath}=      id=com.thecarousell.Carousell:id/login_page_password_text_field
+${login_password_xpath}=      //android.widget.EditText[@text="password"]
+${login_login_xpath}=        id=com.thecarousell.Carousell:id/login_page_login_button
+${category_car_xpath}=      //android.widget.RelativeLayout[@resource-id="com.thecarousell.Carousell:id/home_page_category_icon"]/android.widget.TextView[@text="Cars"]
+${for_sale_text}=      For Sale
+${search_xpath}=      id=com.thecarousell.Carousell:id/tv_search
+${search_car_xpath}=    id=com.thecarousell.Carousell:id/et_search
+${search_button_xpath}=      id=com.thecarousell.Carousell:id/btn_search
+${first_search_result_xpath}=      //android.view.ViewGroup[@resource-id="com.thecarousell.Carousell:id/card_product" and @index='4']
+${ok_got_xpath}=    //android.widget.TextView[@resource-id="com.thecarousell.Carousell:id/feature_button" and @text="OK, Got it!"]
+${ok_got1_xpath}=    //android.widget.TextView[@resource-id="com.thecarousell.Carousell:id/feature_button" and @text="Ok, got it!"]
+${title_desc_xpath}=       id=com.thecarousell.Carousell:id/tvInfo
+#${title_desc_xpath}=       //android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout/android.widget.TextViewid[@resource-id="com.thecarousell.Carousell:id/tvInfo"]
